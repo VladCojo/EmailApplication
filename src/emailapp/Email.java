@@ -32,10 +32,18 @@ public class Email {
         else if (depChoice == 2) return "dev";
         else if (depChoice == 3) return "acct";
         else return "";
-
-
     }
-    
+
+    // Generate password
+    private String randomPassword(int length){
+        String passwordSet = "ABCDEFGHIJKLMNOPRSTUVWXYZ1234567890!@#$%";
+        char[] password = new char[length];
+        for(int i = 0; i < length; i++){
+            int rand = (int)(Math.random() * passwordSet.length());
+            password[i] = passwordSet.charAt(rand);
+        }
+        return new String (password);
+    }
 
     // Set the mailbox capacity
 
