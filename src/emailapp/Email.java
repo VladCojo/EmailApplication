@@ -29,11 +29,11 @@ public class Email {
 
         // Combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department +"."+ companySuffix;
-        System.out.println("Your email: " + email);
+
     }
     // Ask for department
     private String setDepartment(){
-        System.out.print("Enter the department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\n");
+        System.out.print("New worker:"+ firstName + " Department codes:\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\n");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
 
@@ -70,8 +70,8 @@ public class Email {
     public String getPassword(){return password;}
     public String showInfo(){
         return "Display name: " + firstName + " " + lastName +
-                "Company name: " + email +
-                "Mailbox Capacity: " + mailboxCapacity + " mb";
+                "\nCompany email: " + email +
+                "\nMailbox Capacity: " + mailboxCapacity + " mb";
     }
 
 }
